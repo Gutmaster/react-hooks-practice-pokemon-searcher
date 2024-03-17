@@ -1,10 +1,10 @@
 import React from "react";
 
-function Search() {
+function Search({searchText, filterPokemon}) {
   return (
     <div className="ui search">
       <div className="ui icon input">
-        <input className="prompt" />
+        <input className="prompt" value={searchText} onChange={(event) => filterPokemon(event.target.value)}/>
         <i className="search icon" />
       </div>
     </div>
